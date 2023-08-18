@@ -1,7 +1,7 @@
 package com.example.mygram.service;
 
-import com.example.mygram.model.Photo;
-import com.example.mygram.model.dto.PhotoRequest;
+import com.example.mygram.model.entity.Photo;
+import com.example.mygram.model.dto.request.PhotoRequest;
 
 import java.util.List;
 

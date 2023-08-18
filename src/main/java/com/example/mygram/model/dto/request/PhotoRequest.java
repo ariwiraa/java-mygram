@@ -1,4 +1,4 @@
-package com.example.mygram.model.dto;
+package com.example.mygram.model.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 

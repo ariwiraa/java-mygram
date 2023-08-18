@@ -1,9 +1,10 @@
-package com.example.mygram.service;
+package com.example.mygram.service.impl;
 
 import com.example.mygram.exception.NotFoundException;
-import com.example.mygram.model.Photo;
-import com.example.mygram.model.dto.PhotoRequest;
+import com.example.mygram.model.entity.Photo;
+import com.example.mygram.model.dto.request.PhotoRequest;
 import com.example.mygram.repository.PhotoRepository;
+import com.example.mygram.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

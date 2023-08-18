@@ -1,4 +1,4 @@
-package com.example.mygram.model;
+package com.example.mygram.model.entity;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -15,7 +15,7 @@ public class Photo {
     private String description;
     private String image;
 
-    @Column(name = "created_at", nullable = false, updatable = false)
+    @Column(name = "created_at", updatable = false)
     private Date createdAt;
 
 //    @Temporal(TemporalType.TIMESTAMP)

@@ -15,13 +15,18 @@ public class CustomExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<ResponsError> handleException(Exception e) {
-        responseError = new ResponsError(500, e.getMessage(), LocalDateTime.now(), null);
+        responseError = new ResponsError(500, "Failed", LocalDateTime.now(), e.getMessage());
         return ResponseEntity.internalServerError().body(responseError);
     }
 
     @ExceptionHandler(value = NotFoundException.class)
     public ResponseEntity<ResponsError> handlerNotFoundError(NotFoundException e) {
-        responseError = new ResponsError(HttpStatus.NOT_FOUND.value(), e.getMessage(), LocalDateTime.now(), null);
+        responseError = new ResponsError(HttpStatus.NOT_FOUND.value(), "Failed", LocalDateTime.now(), e.getMessage());
+        return ResponseEntity.status(responseError.getCode()).body(responseError);
+    }
+    @ExceptionHandler(value = FoundException.class)
+    public ResponseEntity<ResponsError> handlerFoundError(FoundException e) {
+        responseError = new ResponsError(HttpStatus.BAD_REQUEST.value(), "Failed", LocalDateTime.now(), e.getMessage());
         return ResponseEntity.status(responseError.getCode()).body(responseError);
     }
 }

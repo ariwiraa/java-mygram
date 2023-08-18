@@ -1,8 +1,8 @@
 package com.example.mygram.controller;
 
 
-import com.example.mygram.model.Photo;
-import com.example.mygram.model.dto.PhotoRequest;
+import com.example.mygram.model.entity.Photo;
+import com.example.mygram.model.dto.request.PhotoRequest;
 import com.example.mygram.model.dto.response.ResponseData;
 import com.example.mygram.service.PhotoService;
 import jakarta.validation.Valid;
