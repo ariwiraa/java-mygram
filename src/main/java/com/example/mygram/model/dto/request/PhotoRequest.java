@@ -15,4 +15,12 @@ public class PhotoRequest {
     public String getDescription() {
         return description;
     }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
